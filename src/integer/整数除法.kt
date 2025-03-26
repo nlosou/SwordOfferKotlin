@@ -3,6 +3,12 @@ package integer
 import kotlin.math.pow
 
 
+/**
+*题目:输入 2 个 int 型整数,它们进行除法计算并返回商,要求不得使
+ * 用乘号'*'、除号'/'及求余符号'%'。当发生溢出时,返回最大的整数值。假设
+ * 除数不为 0。例如,输入 15 和 2,输出 15/2 的结果,即 7。
+ **/
+
 //O(n)
 fun function1(a:Int,b:Int):Int
 {
@@ -63,5 +69,5 @@ fun isNegativeNumber(a: Int):Boolean
 
 fun main()
 {
-    println( function2(4,2))
+    println(function2(15,1))
 }
