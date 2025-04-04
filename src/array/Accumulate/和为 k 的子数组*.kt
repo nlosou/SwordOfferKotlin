@@ -2,7 +2,7 @@ package array.Accumulate
 
 
 
-fun fuction6(array: IntArray,k:Int){
+fun fuction6(array: IntArray,k:Int): MutableMap<List<Int>, Int> {
     var temp= mutableMapOf<List<Int>,Int>()
     var j=0
     var k=0
@@ -24,6 +24,7 @@ fun fuction6(array: IntArray,k:Int){
         }
     }
     println(temp.toList().toString())
+    return temp
 }
 fun main(){
     var array= intArrayOf(1,1,1)
