@@ -23,18 +23,19 @@ fun sjjsss(s:String,t:String){
         while (array.values.all { it<=0 }){
             ans.add(s.substring(i,j+1))
             if(array.keys.contains(s[i].code)){
-                array[s[i].code] = array[s[i].code]!! - 1
-            }else{
-                i++
+                array[s[i].code] = array[s[i].code]!! +1
             }
+            i++
         }
         if (!array.values.all { it<=0 }){
             j++
         }
     }
+    println(ans)
+    println(ans.minByOrNull { it.length })
 }
 fun main(){
-    var s="ADDBANCAD"
+    var s="ADDBABCNCADABC"
     var t="ABC"
     sjjsss(s, t)
 }
