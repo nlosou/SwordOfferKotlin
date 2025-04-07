@@ -11,8 +11,8 @@ package array.String
 fun sjjsss(s:String,t:String){
     val ans= mutableListOf<String>()
     val array = mutableMapOf<Int, Int>().withDefault { 0 }
-    t.forEachIndexed { index, c ->
-        array[c.code] = array[c.code]!! + 1
+    t.forEach {
+        array[it.code] = array.getValue(it.code) + 1
     }
     var i=0
     var j=0
@@ -20,10 +20,21 @@ fun sjjsss(s:String,t:String){
         if(array.keys.contains(s[j].code)){
             array[s[j].code] = array[s[j].code]!! - 1
         }
+        while (array.values.all { it<=0 }){
+            ans.add(s.substring(i,j+1))
+            if(array.keys.contains(s[i].code)){
+                array[s[i].code] = array[s[i].code]!! - 1
+            }else{
+                i++
+            }
+        }
+        if (!array.values.all { it<=0 }){
+            j++
+        }
     }
 }
 fun main(){
     var s="ADDBANCAD"
     var t="ABC"
-
+    sjjsss(s, t)
 }
