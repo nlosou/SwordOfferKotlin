@@ -34,8 +34,34 @@ fun sjjsss(s:String,t:String){
     println(ans)
     println(ans.minByOrNull { it.length })
 }
+fun minWindow(s: String, t: String): String {
+    val charCount = mutableMapOf<Char, Int>().withDefault { 0 }
+    t.forEach { charCount[it] = charCount.getValue(it) + 1 }
+    var remaining = t.length
+    var minLen = Int.MAX_VALUE
+    var minStart = 0
+    var i = 0
+
+    for (j in s.indices) {
+        val ch = s[j]
+        if (charCount.getValue(ch) > 0) remaining--
+        charCount[ch] = charCount.getValue(ch) - 1
+
+        while (remaining == 0) {
+            if (j - i + 1 < minLen) {
+                minLen = j - i + 1
+                minStart = i
+            }
+            val leftCh = s[i]
+            charCount[leftCh] = charCount.getValue(leftCh) + 1
+            if (charCount.getValue(leftCh) > 0) remaining++
+            i++
+        }
+    }
+    return if (minLen == Int.MAX_VALUE) "" else s.substring(minStart, minStart + minLen)
+}
 fun main(){
     var s="ADDBABCNCADABC"
-    var t="ABC"
+    var t="ABCF"
     sjjsss(s, t)
 }
