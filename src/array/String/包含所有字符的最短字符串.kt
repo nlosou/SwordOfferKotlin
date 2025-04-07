@@ -8,6 +8,16 @@ package array.String
 的子字符串,则返回任意一个。
  */
 
+fun sjjsss(s:String,t:String){
+    val ans= mutableListOf<String>()
+    val array = mutableMapOf<Int, Int>().withDefault { 0 }
+    t.forEachIndexed { index, c ->
+        array[c.code] = array[c.code]!! + 1
+    }
+    var i=0
+    var j=0
+
+}
 fun main(){
     var s="ADDBANCAD"
     var t="ABC"
