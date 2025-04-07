@@ -16,7 +16,11 @@ fun sjjsss(s:String,t:String){
     }
     var i=0
     var j=0
-
+    while (j<s.length){
+        if(array.keys.contains(s[j].code)){
+            array[s[j].code] = array[s[j].code]!! - 1
+        }
+    }
 }
 fun main(){
     var s="ADDBANCAD"
