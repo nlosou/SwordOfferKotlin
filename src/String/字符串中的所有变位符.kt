@@ -1,6 +1,4 @@
-package array.String
-
-import kotlin.math.sin
+package String
 
 /*
 题目:输入字符串 s1 和 s2,如何找出字符串 s2 的所有变位词在字符

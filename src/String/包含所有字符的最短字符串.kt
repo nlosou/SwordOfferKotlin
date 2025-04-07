@@ -1,4 +1,4 @@
-package array.String
+package String
 
 /*
 题目:输入两个字符串 s 和 t,请找出字符串 s 中包含字符串 t 的所有

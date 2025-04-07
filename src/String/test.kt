@@ -1,6 +1,4 @@
-package array.String
-
-import java.util.*
+package String
 
 
 fun main(){

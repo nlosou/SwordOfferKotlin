@@ -1,7 +1,6 @@
-package array.String
+package String
 
 import kotlin.system.measureNanoTime
-import kotlin.time.measureTime
 
 
 fun sjhsjs(a:String){
