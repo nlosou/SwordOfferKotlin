@@ -7,8 +7,6 @@ package String
 是字符串 s1 中的子字符串,输出它们在字符串 s1 中的起始下标 0 和 5。
  */
 
-
-
 fun sjjs(a:String,b:String){
     var array= mutableMapOf<Int,Int>()
 
