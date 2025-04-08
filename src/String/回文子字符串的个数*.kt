@@ -7,19 +7,3 @@ package String
  */
 
 
-// 建议方案：避免关键字冲突，改用更清晰的字段名
-class ListNode(val value: Int?) {
-        var next: ListNode? = null
-}
-fun main(){
-
-        val headNode=ListNode(value = null)
-        headNode.next=null
-        var a:Int=0
-        while (a!=-1){
-                a= readln().toInt()
-                val newNode=ListNode(a)
-                newNode.next=headNode.next
-                headNode.next=newNode
-        }
-}
