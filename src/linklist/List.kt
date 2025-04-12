@@ -36,7 +36,17 @@ class ListNode(val value: Int?) {
         prev = prev.next!!
     }
 }
-
+fun ListNode.genCricle(enter:Int){
+    var prev=this
+    var prec2=this
+    while (prev.next!=null){
+        prev= prev.next!!
+    }
+    for( i in 1..enter){
+        prec2= prec2.next!!
+    }
+    prev.next=prec2
+}
 fun main() {
     // 创建哨兵节点（value=null作为标识）
     val sentinel = ListNode(null)
