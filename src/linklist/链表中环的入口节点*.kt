@@ -38,10 +38,10 @@ fun finder3(i: ListNode,j:ListNode){
 }
 
 fun main(){
-    val sentinel = ListNode(null)
-    sentinel.append()
-    sentinel.genCricle(3)
-    println(findEnter2(sentinel)?.value)
-    findEnter2(sentinel)?.let { finder3(sentinel, it) }
-    //sentinel.print()
+//    val sentinel = ListNode(null)
+//    sentinel.append()
+//    sentinel.genCricle(3)
+//    println(findEnter2(sentinel)?.value)
+//    findEnter2(sentinel)?.let { finder3(sentinel, it) }
+//    //sentinel.print()
 }

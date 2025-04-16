@@ -5,18 +5,13 @@ class ListNode(val value: Int?) {
     var next: ListNode? = null
 }
 
- fun ListNode.append() {
+ fun ListNode.append(intput:Int) {
     var current = this  // 哨兵节点作为起始点
-    while (true) {
-        val input = readln().toInt()
-        if (input == -1) break
-
         // 尾插法优化：始终找到链表末尾插入
         while (current.next != null) {
             current = current.next!!
         }
-        current.next = ListNode(input)
-    }
+        current.next = ListNode(intput)
 }
 
  fun ListNode.print() {
@@ -48,10 +43,5 @@ fun ListNode.genCricle(enter:Int){
     prev.next=prec2
 }
 fun main() {
-    // 创建哨兵节点（value=null作为标识）
-    val sentinel = ListNode(null)
-    sentinel.append()
-    sentinel.print()
-    sentinel.delete(1)
-    sentinel.print()
+
 }

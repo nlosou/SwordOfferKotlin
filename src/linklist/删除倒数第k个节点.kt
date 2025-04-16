@@ -30,8 +30,8 @@ fun delete_k_node(Head:ListNode,k:Int){
 }
 fun main(){
     // 创建哨兵节点（value=null作为标识）
-    val sentinel = ListNode(null)
-    sentinel.append()
-    delete_k_node(sentinel,2)
-    sentinel.print()
+//    val sentinel = ListNode(null)
+//    sentinel.append()
+//    delete_k_node(sentinel,2)
+//    sentinel.print()
 }
