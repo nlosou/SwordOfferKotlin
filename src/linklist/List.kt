@@ -1,7 +1,7 @@
 package linklist
 
 
-class ListNode(val value: Int?) {
+class ListNode(var value: Int?) {
     var next: ListNode? = null
 
     fun append(intput:Int) {
@@ -18,6 +18,15 @@ class ListNode(val value: Int?) {
             print(p.value)
             p = p.next
         }
+    }
+    fun length(): Int {
+        var i=this
+        var count=0
+        while (i.next!=null){
+            count++
+            i= i.next!!
+        }
+        return count
     }
     fun delete(value: Int) {
         var prev = this    // 从哨兵节点开始遍历
