@@ -48,8 +48,8 @@ fun add(list1:ListNode,list2:ListNode): ListNode {
 }
 
 fun main(){
-    val list1= intArrayOf(9)
-    val list2= intArrayOf(9,9)
+    val list1= intArrayOf(9,9,9)
+    val list2= intArrayOf(1)
     val sentinel1 = ListNode(null)
     val sentinel2 = ListNode(null)
     list1.forEach {
@@ -58,7 +58,7 @@ fun main(){
     list2.forEach {
         sentinel2.append(it)
     }
-   // println(Int.MAX_VALUE)
+    //println(Int.MAX_VALUE)
     reseverList( add(reseverList(sentinel1), reseverList(sentinel2))).print()
 
 }
