@@ -52,8 +52,6 @@ class ListNode(var value: Int?) {
 }
 
 
-
-
 fun main() {
 
 }
