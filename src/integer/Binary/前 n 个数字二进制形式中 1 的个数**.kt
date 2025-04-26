@@ -14,6 +14,7 @@ fun dectoBi(n:Int):Int{
     }
     return count
 }
+
 fun main(){
     val n= readlnOrNull()?.toInt()
     for (i in 0..n!!){

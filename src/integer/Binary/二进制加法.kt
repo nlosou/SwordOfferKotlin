@@ -20,6 +20,7 @@ fun binaryAdd(a:String,b:String): MutableList<Int> {
                     ans.add(0)
                 ans.add(1)
             }
+
         }
     }
     return ans
@@ -36,5 +37,4 @@ fun main()
     {
         print(ans[i])
     }
-
 }
